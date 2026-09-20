@@ -1,6 +1,5 @@
 # Credit-Score-Prediction-Local
-An end-to-end machine learning project for classifying customers into **Poor, Standard, and Good** credit score categories.  
-This repository contains the main local implementation of the project, covering data preprocessing, exploratory data analysis, model development, hyperparameter tuning, evaluation, MLflow experiment tracking, and local Streamlit deployment.
+An end-to-end machine learning project for classifying customers into **Poor, Standard, and Good** credit score categories. This repository contains the main local implementation of the project, covering data preprocessing, exploratory data analysis, model development, hyperparameter tuning, evaluation, MLflow experiment tracking, and local Streamlit deployment.
 
 ## Project Workflow
 Data → EDA → Preprocessing → Model Training → Hyperparameter Tuning → Evaluation → MLflow → Model Selection → Streamlit Deployment
@@ -18,6 +17,7 @@ The preprocessing stage included:
 * Preparing numerical and categorical features
 * Splitting the dataset into training and testing sets using an 80:20 ratio
 * Applying stratified splitting based on `Credit_Score`  
+
 A reusable `ModelPreprocessor` class was implemented to organize the preprocessing workflow.
 
 ## Exploratory Data Analysis
@@ -27,6 +27,7 @@ EDA was performed to understand the target distribution and relationships betwee
 * Numerical feature distributions
 * Correlation analysis
 * Outlier analysis  
+
 Several features showed noticeable patterns across credit score categories, including Credit Mix, Payment of Minimum Amount, Monthly Inhand Salary, Outstanding Debt, and Delay from Due Date.
 
 ## Model Development
@@ -36,6 +37,7 @@ Several machine learning models were explored, including:
 * Extra Trees
 * Gradient Boosting
 * XGBoost  
+
 Random Forest, Extra Trees, and XGBoost were further optimized and evaluated during the main model comparison.
 
 ## Hyperparameter Tuning
@@ -43,6 +45,7 @@ Hyperparameter tuning was performed using `RandomizedSearchCV` with:
 * 20 parameter combinations
 * 3-fold cross-validation
 * `f1_macro` as the scoring metric  
+
 Models were evaluated using Accuracy, Precision, Recall, and F1-Score.
 
 ## MLflow Experiment Tracking
@@ -51,6 +54,7 @@ MLflow was used to track model experiments, including:
 * Evaluation metrics
 * Model artifacts
 * Trained model files  
+
 This allowed different model configurations to be compared systematically.
 
 ## Deployment
